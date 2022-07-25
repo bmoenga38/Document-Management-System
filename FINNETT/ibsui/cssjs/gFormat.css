@@ -1,0 +1,52 @@
+﻿.textwidth
+{
+    position:fixed;
+    width:100%;
+}
+
+
+.mGrid { 
+    width: 100%; 
+    background-color: #fff; 
+    margin: 5px 0 10px 0;  
+    border-collapse:collapse; 
+    font-family:'Century Gothic';
+    cursor:auto;
+    position:absolute;
+    font-size:small;
+    left:0px;
+    right:0px;
+    cursor:pointer;
+}
+
+.mGrid td { 
+    padding: 2px;  
+    color: #717171; 
+    cursor:auto;
+    font-size:small;
+    cursor:pointer;
+}
+.mGrid th { 
+    padding: 4px 10px; 
+    color: #fff; 
+    background-color: #0078d7; 
+    font-size: 0.9em; 
+    cursor:auto;
+    font-size:small;
+    cursor:pointer;
+}
+.mGrid .alt { background-color: #f5f1f1;cursor:auto; }
+.mGrid .pgr { background-color: #424242;cursor:auto; }
+.mGrid .pgr table { margin: 5px 0;cursor:auto; }
+.mGrid .pgr td { 
+    border-width: 0; 
+    padding: 0 6px; 
+    border-left: solid 1px #666; 
+    font-weight: bold; 
+    color: #fff; 
+    line-height: 12px; 
+    cursor:auto;
+    font-size:small;
+ }   
+.mGrid .pgr a { color: #666; text-decoration: none;cursor:auto; }
+.mGrid .pgr a:hover { color: #000; text-decoration: none;cursor:auto; }

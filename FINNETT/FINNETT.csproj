@@ -1,0 +1,1687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{66A32D15-F97A-4229-9136-BAD911A4F879}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FINNETT</RootNamespace>
+    <AssemblyName>FINNETT</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=19.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.19.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit.HtmlEditor.Sanitizer">
+      <HintPath>E:\Projects\Finnett IBIS\FINNETT\FINNETT\bin\AjaxControlToolkit.HtmlEditor.Sanitizer.dll</HintPath>
+    </Reference>
+    <Reference Include="DropDownCheckBoxes, Version=1.1.0.31568, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DropDownCheckBoxes.1.1.0.31568\lib\DropDownCheckBoxes.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="LINQtoDataTable">
+      <HintPath>E:\Projects\Finnett IBIS\FINNETT\FINNETT\bin\LINQtoDataTable.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.Design.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.21\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyGridHelpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8d057480aea50653, processorArchitecture=MSIL">
+      <HintPath>..\packages\PropertyGridHelpers.2021.12.31.3\lib\net452\PropertyGridHelpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.6.9.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.106.6.9\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.111.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.111.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.111.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net46\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net46\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.0.0\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.10.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.21\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.21\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app-assets\css\app.min.css" />
+    <Content Include="app-assets\css\bootstrap-extended.css" />
+    <Content Include="app-assets\css\bootstrap.css" />
+    <Content Include="app-assets\css\colors.css" />
+    <Content Include="app-assets\css\components.css" />
+    <Content Include="app-assets\css\core\colors\palette-callout.min.css" />
+    <Content Include="app-assets\css\core\colors\palette-climacon.css" />
+    <Content Include="app-assets\css\core\colors\palette-gradient.min.css" />
+    <Content Include="app-assets\css\core\colors\palette-noui.css" />
+    <Content Include="app-assets\css\core\colors\palette-tooltip.min.css" />
+    <Content Include="app-assets\css\core\menu\menu-types\horizontal-menu.min.css" />
+    <Content Include="app-assets\css\pages\chat-application.css" />
+    <Content Include="app-assets\css\pages\coming-soon.css" />
+    <Content Include="app-assets\css\pages\email-application.css" />
+    <Content Include="app-assets\css\pages\error.min.css" />
+    <Content Include="app-assets\css\pages\gallery.min.css" />
+    <Content Include="app-assets\css\pages\invoice.min.css" />
+    <Content Include="app-assets\css\pages\login-register.min.css" />
+    <Content Include="app-assets\css\pages\project.min.css" />
+    <Content Include="app-assets\css\pages\search.min.css" />
+    <Content Include="app-assets\css\pages\timeline.min.css" />
+    <Content Include="app-assets\css\pages\under-maintenance.min.css" />
+    <Content Include="app-assets\css\pages\users.min.css" />
+    <Content Include="app-assets\css\plugins\animate\animate.min.css" />
+    <Content Include="app-assets\css\plugins\calendars\fullcalendar.min.css" />
+    <Content Include="app-assets\css\plugins\extensions\noui-slider.min.css" />
+    <Content Include="app-assets\css\plugins\extensions\toastr.min.css" />
+    <Content Include="app-assets\css\plugins\file-uploaders\dropzone.min.css" />
+    <Content Include="app-assets\css\plugins\forms\checkboxes-radios.min.css" />
+    <Content Include="app-assets\css\plugins\forms\extended\form-extended.min.css" />
+    <Content Include="app-assets\css\plugins\forms\switch.min.css" />
+    <Content Include="app-assets\css\plugins\forms\validation\form-validation.css" />
+    <Content Include="app-assets\css\plugins\forms\wizard.min.css" />
+    <Content Include="app-assets\css\plugins\images\cropper\cropper.min.css" />
+    <Content Include="app-assets\css\plugins\pickers\daterange\daterange.min.css" />
+    <Content Include="app-assets\css\style.css" />
+    <Content Include="app-assets\css\vendors.min.css" />
+    <Content Include="app-assets\data\jvector\gdp-data.js" />
+    <Content Include="app-assets\data\jvector\visitor-data.js" />
+    <Content Include="app-assets\fonts\feather\fonts\feather2467.svg" />
+    <Content Include="app-assets\fonts\feather\style.min.css" />
+    <Content Include="app-assets\fonts\flag-icon-css\css\flag-icon.min.css" />
+    <Content Include="app-assets\fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="app-assets\fonts\kosmo\fonts\kosmo7381.svg" />
+    <Content Include="app-assets\fonts\kosmo\styles.css" />
+    <Content Include="app-assets\fonts\line-awesome\css\line-awesome.min.css" />
+    <Content Include="app-assets\fonts\line-awesome\fonts\line-awesomeeb4f.svg" />
+    <Content Include="app-assets\fonts\meteocons\style.min.css" />
+    <Content Include="app-assets\fonts\montserrat\styles.css" />
+    <Content Include="app-assets\fonts\open-sans\styles.css" />
+    <Content Include="app-assets\fonts\simple-line-icons\style.min.css" />
+    <Content Include="app-assets\fonts\weather\css\weather-icons.min.css" />
+    <Content Include="app-assets\fonts\weather\font\weathericons-regular-webfont.svg" />
+    <Content Include="app-assets\jquery.min.js" />
+    <Content Include="app-assets\js\core\app-menu.min.js" />
+    <Content Include="app-assets\js\core\app.min.js" />
+    <Content Include="app-assets\js\scripts\cards\card-charts.min.js" />
+    <Content Include="app-assets\js\scripts\cards\card-ecommerce.min.js" />
+    <Content Include="app-assets\js\scripts\cards\card-maps.min.js" />
+    <Content Include="app-assets\js\scripts\cards\card-social.min.js" />
+    <Content Include="app-assets\js\scripts\cards\card-statistics.min.js" />
+    <Content Include="app-assets\js\scripts\cards\draggable.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\bar\bi-polar-bar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\bar\distributed-series.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\bar\horizontal-bar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\bar\multi-column.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\bar\peak-circles.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\bar\stacked-bar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\line\area.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\line\bi-polar-area.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\line\holes-in-data.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\line\line-scatter.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\line\line.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\line\series-overrides.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\line\whole-numbers.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\pie\custom-labels.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\pie\donut.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\pie\gauge.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartist\pie\pie.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\advance\bubble.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\advance\combo-bar-line-data-label.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\advance\combo-bar-line.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\advance\different-point-sizes.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\bar\bar-multi-axis.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\bar\bar-stacked.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\bar\bar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\bar\column-multi-axis.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\bar\column-stacked.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\bar\column.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\line\line-area.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\line\line-logarithmic.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\line\line-multi-axis.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\line\line-skip-points.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\line\line-stacked-area.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\line\line.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\pie-doughnut\doughnut-simple.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\pie-doughnut\doughnut.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\pie-doughnut\pie-simple.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\pie-doughnut\pie.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\polar-radar\polar-skip-points.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\polar-radar\polar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\polar-radar\radar-skip-points.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\polar-radar\radar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\scatter\scatter-logX.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\scatter\scatter-multi-axis.min.js" />
+    <Content Include="app-assets\js\scripts\charts\chartjs\scatter\scatter.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\advance\candlestick-multi-level-control.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\advance\dynamic-data.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\advance\event-river.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\advance\eventRiver2-data.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\advance\multiple-series-rainbow.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\advance\time-data.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\advance\timeline-options.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\advance\timeline.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\advance\tornado.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\advance\treemap.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\advance\word-cloud.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\bar-column\basic-bar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\bar-column\basic-column.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\bar-column\change-waterfall.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\bar-column\column-multi-level-control.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\bar-column\irregular-bar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\bar-column\stacked-bar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\bar-column\stacked-clustered-column.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\bar-column\stacked-column.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\bar-column\stacked-floating-bar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\bar-column\thermometer.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\combination\column-line.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\combination\column-pie.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\combination\multiple-combination.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\combination\scatter-line.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\combination\scatter-pie.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\funnel-gauges\angular-gauge.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\funnel-gauges\basic-gauge.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\funnel-gauges\customized-gauge.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\funnel-gauges\funnel-plot.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\funnel-gauges\funnel-pyramid.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\funnel-gauges\left-align-funnel.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\funnel-gauges\multiple-funnel1.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\funnel-gauges\multiple-funnel2.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\funnel-gauges\multiple-gauges.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\funnel-gauges\right-align-funnel.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\line-area\basic-area.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\line-area\basic-line.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\line-area\irregular-line-time-axis.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\line-area\irregular-line-two-value-axis.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\line-area\line-multilevel-control.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\line-area\stacked-area.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\line-area\stacked-line.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\pie-doughnut\basic-pie.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\pie-doughnut\doughnut-infographic.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\pie-doughnut\doughnut.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\pie-doughnut\lasagna.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\pie-doughnut\multiple-doughnut.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\pie-doughnut\nested-pie.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\pie-doughnut\nightingale-rose-labels.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\pie-doughnut\nightingale-rose.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\pie-doughnut\timeline.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\radar-chord\basic-chord.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\radar-chord\basic-filled-radar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\radar-chord\basic-radar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\radar-chord\chord-sorting.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\radar-chord\multiple-dimensions-chord.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\radar-chord\multiple-radars.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\radar-chord\non-ribbon-chord.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\radar-chord\radar-multi-level-control.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\radar-chord\wormhole.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\scatter\basic-bubble.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\scatter\basic-scatter.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\scatter\category-scatter.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\scatter\large-scale-scatter.min.js" />
+    <Content Include="app-assets\js\scripts\charts\echarts\scatter\scatter-multi-level-control.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\bar\annotations.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\bar\bar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\bar\error-bars.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\bar\stacked-bar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\bar\thresholds.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\line\line.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\line\realtime.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\line\series-types.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\line\symbols.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\line\tracking.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\line\visitors.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\pie\donut-hole.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\pie\interactive-pie.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\pie\label-formatter.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\pie\pie.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\pie\rectangular-pie.min.js" />
+    <Content Include="app-assets\js\scripts\charts\flot\pie\tilted-pie.min.js" />
+    <Content Include="app-assets\js\scripts\charts\gmaps\maps.min.js" />
+    <Content Include="app-assets\js\scripts\charts\gmaps\overlays.min.js" />
+    <Content Include="app-assets\js\scripts\charts\gmaps\routes.min.js" />
+    <Content Include="app-assets\js\scripts\charts\gmaps\services.min.js" />
+    <Content Include="app-assets\js\scripts\charts\gmaps\utils.min.js" />
+    <Content Include="app-assets\js\scripts\charts\jvector\jvector.min.js" />
+    <Content Include="app-assets\js\scripts\charts\morris\area.min.js" />
+    <Content Include="app-assets\js\scripts\charts\morris\bar.min.js" />
+    <Content Include="app-assets\js\scripts\charts\morris\donut.min.js" />
+    <Content Include="app-assets\js\scripts\charts\morris\line.min.js" />
+    <Content Include="app-assets\js\scripts\charts\morris\smooth-area.min.js" />
+    <Content Include="app-assets\js\scripts\charts\morris\smooth-line.min.js" />
+    <Content Include="app-assets\js\scripts\coming-soon\coming-soon.js" />
+    <Content Include="app-assets\js\scripts\customizer.min.js" />
+    <Content Include="app-assets\js\scripts\extensions\block-ui.js" />
+    <Content Include="app-assets\js\scripts\extensions\dropzone.min.js" />
+    <Content Include="app-assets\js\scripts\extensions\fullcalendar.min.js" />
+    <Content Include="app-assets\js\scripts\extensions\image-cropper.min.js" />
+    <Content Include="app-assets\js\scripts\extensions\knob.min.js" />
+    <Content Include="app-assets\js\scripts\extensions\noui-slider.min.js" />
+    <Content Include="app-assets\js\scripts\extensions\rating.min.js" />
+    <Content Include="app-assets\js\scripts\extensions\sweet-alerts.min.js" />
+    <Content Include="app-assets\js\scripts\extensions\toastr.min.js" />
+    <Content Include="app-assets\js\scripts\forms\checkbox-radio.min.js" />
+    <Content Include="app-assets\js\scripts\forms\extended\form-inputmask.min.js" />
+    <Content Include="app-assets\js\scripts\forms\extended\form-maxlength.min.js" />
+    <Content Include="app-assets\js\scripts\forms\extended\form-typeahead.min.js" />
+    <Content Include="app-assets\js\scripts\forms\form-login-register.min.js" />
+    <Content Include="app-assets\js\scripts\forms\form-repeater.min.js" />
+    <Content Include="app-assets\js\scripts\forms\input-groups.min.js" />
+    <Content Include="app-assets\js\scripts\forms\select\form-select2.min.js" />
+    <Content Include="app-assets\js\scripts\forms\switch.min.js" />
+    <Content Include="app-assets\js\scripts\forms\switchery.min.js" />
+    <Content Include="app-assets\js\scripts\forms\tags\tagging.min.js" />
+    <Content Include="app-assets\js\scripts\forms\validation\form-validation.js" />
+    <Content Include="app-assets\js\scripts\forms\wizard-steps.min.js" />
+    <Content Include="app-assets\js\scripts\gallery\photo-swipe\photoswipe-script.min.js" />
+    <Content Include="app-assets\js\scripts\modal\components-modal.min.js" />
+    <Content Include="app-assets\js\scripts\navs\navs.min.js" />
+    <Content Include="app-assets\js\scripts\pages\chat-application.js" />
+    <Content Include="app-assets\js\scripts\pages\content-sidebar.min.js" />
+    <Content Include="app-assets\js\scripts\pages\dashboard-analytics.min.js" />
+    <Content Include="app-assets\js\scripts\pages\dashboard-ecommerce.min.js" />
+    <Content Include="app-assets\js\scripts\pages\dashboard-fitness.min.js" />
+    <Content Include="app-assets\js\scripts\pages\email-application.js" />
+    <Content Include="app-assets\js\scripts\pages\project-summary-bug.min.js" />
+    <Content Include="app-assets\js\scripts\pages\project-summary-task.min.js" />
+    <Content Include="app-assets\js\scripts\pages\timeline.min.js" />
+    <Content Include="app-assets\js\scripts\pagination\pagination.js" />
+    <Content Include="app-assets\js\scripts\pickers\dateTime\bootstrap-datetime.min.js" />
+    <Content Include="app-assets\js\scripts\pickers\dateTime\pick-a-datetime.min.js" />
+    <Content Include="app-assets\js\scripts\popover\popover.min.js" />
+    <Content Include="app-assets\js\scripts\tables\components\table-components.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-autofill.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-button\datatable-button-basic.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-button\datatable-extensions-api.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-button\datatable-flash.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-button\datatable-html5.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-button\datatable-print.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-button\datatable-visibility.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-colvis.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-fixed-column.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-fixed-header.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-keytable.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-responsive.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-rowreorder.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatable-select.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatables-colreorder.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables-extensions\datatables-sources.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables\datatable-advanced.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables\datatable-api.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables\datatable-basic.min.js" />
+    <Content Include="app-assets\js\scripts\tables\datatables\datatable-styling.min.js" />
+    <Content Include="app-assets\js\scripts\tables\jsgrid\jsgrid.min.js" />
+    <Content Include="app-assets\js\scripts\tooltip\tooltip.min.js" />
+    <Content Include="app-assets\js\scripts\ui\breadcrumbs-with-stats.min.js" />
+    <Content Include="app-assets\js\scripts\ui\scrollable.js" />
+    <Content Include="app-assets\js\scripts\ui\scrollable.min.js" />
+    <Content Include="app-assets\vendors\css\calendars\fullcalendar.min.css" />
+    <Content Include="app-assets\vendors\css\charts\chartist-plugin-tooltip.css" />
+    <Content Include="app-assets\vendors\css\charts\chartist.css" />
+    <Content Include="app-assets\vendors\css\charts\jquery-jvectormap-2.0.3.css" />
+    <Content Include="app-assets\vendors\css\charts\morris.css" />
+    <Content Include="app-assets\vendors\css\extensions\bgvideo\bigvideo.css" />
+    <Content Include="app-assets\vendors\css\extensions\bgvideo\bigvideo.png" />
+    <Content Include="app-assets\vendors\css\extensions\bgvideo\video-js.min.css" />
+    <Content Include="app-assets\vendors\css\extensions\nouislider.min.css" />
+    <Content Include="app-assets\vendors\css\extensions\pace.css" />
+    <Content Include="app-assets\vendors\css\extensions\raty\fonts\raty.svg" />
+    <Content Include="app-assets\vendors\css\extensions\raty\jquery.raty.css" />
+    <Content Include="app-assets\vendors\css\extensions\sweetalert.css" />
+    <Content Include="app-assets\vendors\css\extensions\toastr.css" />
+    <Content Include="app-assets\vendors\css\extensions\unslider.css" />
+    <Content Include="app-assets\vendors\css\file-uploaders\dropzone.min.css" />
+    <Content Include="app-assets\vendors\css\forms\icheck\custom.css" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\aero%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\aero.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\blue%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\blue.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\flat%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\flat.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\green%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\green.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\grey%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\grey.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\orange%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\orange.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\pink%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\pink.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\purple%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\purple.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\red%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\red.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\yellow%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\yellow.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\flat\_all.css" />
+    <Content Include="app-assets\vendors\css\forms\icheck\futurico\futurico%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\futurico\futurico.css" />
+    <Content Include="app-assets\vendors\css\forms\icheck\futurico\futurico.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\icheck.css" />
+    <Content Include="app-assets\vendors\css\forms\icheck\line\line%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\line\line.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\line\_all.css" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\aero%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\aero.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\blue%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\blue.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\green%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\green.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\grey%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\grey.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\minimal%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\minimal.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\orange%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\orange.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\pink%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\pink.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\purple%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\purple.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\red%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\red.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\yellow%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\yellow.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\minimal\_all.css" />
+    <Content Include="app-assets\vendors\css\forms\icheck\polaris\polaris%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\polaris\polaris.css" />
+    <Content Include="app-assets\vendors\css\forms\icheck\polaris\polaris.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\aero%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\aero.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\blue%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\blue.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\green%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\green.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\grey%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\grey.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\orange%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\orange.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\pink%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\pink.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\purple%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\purple.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\red%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\red.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\square%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\square.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\yellow%402x.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\yellow.png" />
+    <Content Include="app-assets\vendors\css\forms\icheck\square\_all.css" />
+    <Content Include="app-assets\vendors\css\forms\selects\select2.min.css" />
+    <Content Include="app-assets\vendors\css\forms\spinner\jquery.bootstrap-touchspin.css" />
+    <Content Include="app-assets\vendors\css\forms\tags\tagging.css" />
+    <Content Include="app-assets\vendors\css\forms\toggle\switchery.min.css" />
+    <Content Include="app-assets\vendors\css\pickers\daterange\daterangepicker.css" />
+    <Content Include="app-assets\vendors\css\pickers\datetime\bootstrap-datetimepicker.css" />
+    <Content Include="app-assets\vendors\css\pickers\pickadate\pickadate.css" />
+    <Content Include="app-assets\vendors\css\tables\datatable\buttons.bootstrap4.min.css" />
+    <Content Include="app-assets\vendors\css\tables\datatable\datatables.min.css" />
+    <Content Include="app-assets\vendors\css\tables\datatable\select.dataTables.min.css" />
+    <Content Include="app-assets\vendors\css\tables\extensions\autoFill.dataTables.min.css" />
+    <Content Include="app-assets\vendors\css\tables\extensions\buttons.dataTables.min.css" />
+    <Content Include="app-assets\vendors\css\tables\extensions\colReorder.dataTables.min.css" />
+    <Content Include="app-assets\vendors\css\tables\extensions\dataTables.colVis.css" />
+    <Content Include="app-assets\vendors\css\tables\extensions\fixedColumns.dataTables.min.css" />
+    <Content Include="app-assets\vendors\css\tables\extensions\fixedHeader.dataTables.min.css" />
+    <Content Include="app-assets\vendors\css\tables\extensions\keyTable.dataTables.min.css" />
+    <Content Include="app-assets\vendors\css\tables\extensions\responsive.dataTables.min.css" />
+    <Content Include="app-assets\vendors\css\tables\extensions\rowReorder.dataTables.min.css" />
+    <Content Include="app-assets\vendors\css\tables\jsgrid\jsgrid-theme.min.css" />
+    <Content Include="app-assets\vendors\css\tables\jsgrid\jsgrid.min.css" />
+    <Content Include="app-assets\vendors\css\ui\dragula.min.css" />
+    <Content Include="app-assets\vendors\css\ui\prism.min.css" />
+    <Content Include="app-assets\vendors\css\weather-icons\climacons.min.css" />
+    <Content Include="app-assets\vendors\js\bgvideo\bigvideo.js" />
+    <Content Include="app-assets\vendors\js\bgvideo\imagesloaded.pkgd.min.js" />
+    <Content Include="app-assets\vendors\js\bgvideo\jquery.tubular.1.0.js" />
+    <Content Include="app-assets\vendors\js\bgvideo\video.min.js" />
+    <Content Include="app-assets\vendors\js\charts\chart.min.js" />
+    <Content Include="app-assets\vendors\js\charts\chartist-plugin-tooltip.js" />
+    <Content Include="app-assets\vendors\js\charts\chartist.min.js" />
+    <Content Include="app-assets\vendors\js\charts\echarts\echarts.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.categories.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.errorbars.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.min.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.navigate.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.pie.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.resize.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.selection.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.stack.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.symbol.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.threshold.js" />
+    <Content Include="app-assets\vendors\js\charts\flot\jquery.flot.time.js" />
+    <Content Include="app-assets\vendors\js\charts\gmaps.min.js" />
+    <Content Include="app-assets\vendors\js\charts\jquery.sparkline.min.js" />
+    <Content Include="app-assets\vendors\js\charts\jvector\jquery-jvectormap-2.0.3.min.js" />
+    <Content Include="app-assets\vendors\js\charts\jvector\jquery-jvectormap-de-merc.js" />
+    <Content Include="app-assets\vendors\js\charts\jvector\jquery-jvectormap-us-aea.js" />
+    <Content Include="app-assets\vendors\js\charts\jvector\jquery-jvectormap-us-lcc.js" />
+    <Content Include="app-assets\vendors\js\charts\jvector\jquery-jvectormap-world-mill.js" />
+    <Content Include="app-assets\vendors\js\charts\morris.min.js" />
+    <Content Include="app-assets\vendors\js\charts\raphael-min.js" />
+    <Content Include="app-assets\vendors\js\coming-soon\jquery.countdown.min.js" />
+    <Content Include="app-assets\vendors\js\extensions\cropper.min.js" />
+    <Content Include="app-assets\vendors\js\extensions\dragula.min.js" />
+    <Content Include="app-assets\vendors\js\extensions\dropzone.min.js" />
+    <Content Include="app-assets\vendors\js\extensions\fullcalendar.min.js" />
+    <Content Include="app-assets\vendors\js\extensions\gcal.js" />
+    <Content Include="app-assets\vendors\js\extensions\jquery.knob.min.js" />
+    <Content Include="app-assets\vendors\js\extensions\jquery.raty.js" />
+    <Content Include="app-assets\vendors\js\extensions\jquery.steps.min.js" />
+    <Content Include="app-assets\vendors\js\extensions\lang-all.js" />
+    <Content Include="app-assets\vendors\js\extensions\moment.min.js" />
+    <Content Include="app-assets\vendors\js\extensions\nouislider.min.js" />
+    <Content Include="app-assets\vendors\js\extensions\sweetalert.min.js" />
+    <Content Include="app-assets\vendors\js\extensions\toastr.min.js" />
+    <Content Include="app-assets\vendors\js\extensions\unslider-min.js" />
+    <Content Include="app-assets\vendors\js\extensions\wNumb.js" />
+    <Content Include="app-assets\vendors\js\forms\extended\inputmask\jquery.inputmask.bundle.min.js" />
+    <Content Include="app-assets\vendors\js\forms\extended\maxlength\bootstrap-maxlength.js" />
+    <Content Include="app-assets\vendors\js\forms\extended\typeahead\bloodhound.min.js" />
+    <Content Include="app-assets\vendors\js\forms\extended\typeahead\handlebars.js" />
+    <Content Include="app-assets\vendors\js\forms\extended\typeahead\typeahead.bundle.min.js" />
+    <Content Include="app-assets\vendors\js\forms\icheck\icheck.min.js" />
+    <Content Include="app-assets\vendors\js\forms\repeater\jquery.repeater.min.js" />
+    <Content Include="app-assets\vendors\js\forms\select\select2.full.min.js" />
+    <Content Include="app-assets\vendors\js\forms\spinner\jquery.bootstrap-touchspin.js" />
+    <Content Include="app-assets\vendors\js\forms\tags\form-field.js" />
+    <Content Include="app-assets\vendors\js\forms\tags\tagging.min.js" />
+    <Content Include="app-assets\vendors\js\forms\toggle\bootstrap-checkbox.min.js" />
+    <Content Include="app-assets\vendors\js\forms\toggle\switchery.min.js" />
+    <Content Include="app-assets\vendors\js\forms\validation\jqBootstrapValidation.js" />
+    <Content Include="app-assets\vendors\js\forms\validation\jquery.validate.min.js" />
+    <Content Include="app-assets\vendors\js\gallery\masonry\masonry.pkgd.min.js" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\default-skin\default-skin.css" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\default-skin\default-skin.png" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\default-skin\default-skin.svg" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\default-skin\preloader.gif" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\photoswipe-ui-default.min.js" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\photoswipe.css" />
+    <Content Include="app-assets\vendors\js\gallery\photo-swipe\photoswipe.min.js" />
+    <Content Include="app-assets\vendors\js\pagination\jquery.bootpag.min.js" />
+    <Content Include="app-assets\vendors\js\pagination\jquery.twbsPagination.min.js" />
+    <Content Include="app-assets\vendors\js\pickers\daterange\daterangepicker.js" />
+    <Content Include="app-assets\vendors\js\pickers\dateTime\bootstrap-datetimepicker.min.js" />
+    <Content Include="app-assets\vendors\js\pickers\dateTime\moment-with-locales.min.js" />
+    <Content Include="app-assets\vendors\js\pickers\pickadate\legacy.js" />
+    <Content Include="app-assets\vendors\js\pickers\pickadate\picker.date.js" />
+    <Content Include="app-assets\vendors\js\pickers\pickadate\picker.js" />
+    <Content Include="app-assets\vendors\js\pickers\pickadate\picker.time.js" />
+    <Content Include="app-assets\vendors\js\tables\buttons.colVis.min.js" />
+    <Content Include="app-assets\vendors\js\tables\buttons.flash.min.js" />
+    <Content Include="app-assets\vendors\js\tables\buttons.html5.min.js" />
+    <Content Include="app-assets\vendors\js\tables\buttons.print.min.js" />
+    <Content Include="app-assets\vendors\js\tables\datatable\buttons.bootstrap4.min.js" />
+    <Content Include="app-assets\vendors\js\tables\datatable\dataTables.autoFill.min.js" />
+    <Content Include="app-assets\vendors\js\tables\datatable\dataTables.buttons.min.js" />
+    <Content Include="app-assets\vendors\js\tables\datatable\dataTables.colReorder.min.js" />
+    <Content Include="app-assets\vendors\js\tables\datatable\dataTables.colVis.js" />
+    <Content Include="app-assets\vendors\js\tables\datatable\dataTables.fixedColumns.min.js" />
+    <Content Include="app-assets\vendors\js\tables\datatable\dataTables.fixedHeader.min.js" />
+    <Content Include="app-assets\vendors\js\tables\datatable\dataTables.keyTable.min.js" />
+    <Content Include="app-assets\vendors\js\tables\datatable\datatables.min.js" />
+    <Content Include="app-assets\vendors\js\tables\datatable\dataTables.responsive.min.js" />
+    <Content Include="app-assets\vendors\js\tables\datatable\dataTables.rowReorder.min.js" />
+    <Content Include="app-assets\vendors\js\tables\datatable\dataTables.select.min.js" />
+    <Content Include="app-assets\vendors\js\tables\jsgrid\griddata.js" />
+    <Content Include="app-assets\vendors\js\tables\jsgrid\jsgrid.min.js" />
+    <Content Include="app-assets\vendors\js\tables\jszip.min.js" />
+    <Content Include="app-assets\vendors\js\tables\pdfmake.min.js" />
+    <Content Include="app-assets\vendors\js\tables\vfs_fonts.js" />
+    <Content Include="app-assets\vendors\js\timeline\horizontal-timeline.js" />
+    <Content Include="app-assets\vendors\js\ui\jquery-ui.min.js" />
+    <Content Include="app-assets\vendors\js\ui\jquery.sticky.js" />
+    <Content Include="app-assets\vendors\js\ui\prism.min.js" />
+    <Content Include="app-assets\vendors\js\vendors.min.js" />
+    <Content Include="data\apipath.txt" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="ibsui\cop\createbanks.aspx" />
+    <Content Include="ibsui\cop\minstatement.aspx" />
+    <Content Include="ibsui\cop\pesalink2account.aspx" />
+    <Content Include="ibsui\cop\pesalink2phone.aspx" />
+    <Content Include="ibsui\cop\iftaccount.aspx" />
+    <Content Include="ibsui\cop\fullstatement.aspx" />
+    <Content Include="ibsui\cop\accounttransaction.aspx" />
+    <Content Include="ibsui\cop\accountbalance.aspx" />
+    <Content Include="ibsui\cop\apiendpoints.aspx" />
+    <Content Include="ibsui\cop\createapplications.aspx" />
+    <Content Include="ibsui\cop\mpesaurl.aspx" />
+    <Content Include="ibsui\cop\overviewpage.aspx" />
+    <Content Include="ibsui\cop\samplepage.aspx" />
+    <Content Include="ibsui\cop\createaccount.aspx" />
+    <Content Include="ibsui\cssjs\bootstrap.min.css" />
+    <Content Include="ibsui\cssjs\bootstrap.min.js" />
+    <Content Include="ibsui\cssjs\chart.min.js" />
+    <Content Include="ibsui\cssjs\customrightclick.css" />
+    <Content Include="ibsui\cssjs\flexslider.css" />
+    <Content Include="ibsui\cssjs\gFormat.css" />
+    <Content Include="ibsui\cssjs\GridviewCSS.css" />
+    <Content Include="ibsui\cssjs\jquery-1.4.3.min.js" />
+    <Content Include="ibsui\cssjs\jquery-1.7.js" />
+    <Content Include="ibsui\cssjs\jquery-1.8.2.min.js" />
+    <Content Include="ibsui\cssjs\jquery.flexslider.js" />
+    <Content Include="ibsui\cssjs\notie.js" />
+    <Content Include="ibsui\cssjs\notie.min.css" />
+    <Content Include="ibsui\cssjs\notie.min.js" />
+    <Content Include="ibsui\cssjs\popupcss.css" />
+    <Content Include="ibsui\cssjs\select2.css" />
+    <Content Include="ibsui\cssjs\select2.js" />
+    <Content Include="ibsui\cssjs\select2.min.css" />
+    <Content Include="ibsui\cssjs\select2.min.js" />
+    <Content Include="ibsui\dms\filetype.aspx" />
+    <Content Include="ibsui\dms\filesubcategory.aspx" />
+    <Content Include="ibsui\dms\files.aspx" />
+    <Content Include="ibsui\dms\folders.aspx" />
+    <Content Include="ibsui\dsh\modgui\assets\css\app.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\bootstrap-extended.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\bootstrap.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\colors.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\components.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\core\colors\palette-callout.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\core\colors\palette-climacon.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\core\colors\palette-gradient.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\core\colors\palette-noui.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\core\colors\palette-tooltip.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\core\menu\menu-types\horizontal-menu.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\pages\chat-application.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\pages\coming-soon.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\pages\email-application.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\pages\error.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\pages\gallery.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\pages\invoice.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\pages\login-register.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\pages\project.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\pages\search.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\pages\timeline.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\pages\under-maintenance.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\pages\users.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\plugins\animate\animate.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\plugins\calendars\fullcalendar.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\plugins\extensions\noui-slider.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\plugins\extensions\toastr.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\plugins\file-uploaders\dropzone.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\plugins\forms\checkboxes-radios.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\plugins\forms\extended\form-extended.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\plugins\forms\switch.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\plugins\forms\validation\form-validation.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\plugins\forms\wizard.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\plugins\images\cropper\cropper.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\plugins\pickers\daterange\daterange.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\style.css" />
+    <Content Include="ibsui\dsh\modgui\assets\css\vendors.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\feather\fonts\feather2467.svg" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\feather\style.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\font-awesome\css\font-awesome.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\kosmo\fonts\kosmo7381.svg" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\kosmo\styles.css" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\line-awesome\css\line-awesome.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\line-awesome\fonts\line-awesomeeb4f.svg" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\styles.css" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\open-sans\styles.css" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\simple-line-icons\style.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\img\album-image.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\ava-1.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\ava-2.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\ava-3.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\ava-4.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-1.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-10.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-11.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-12.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-13.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-2.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-3.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-4.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-5.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-6.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-7.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-8.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\avatar-9.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\placeholders\ava-36.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\avatars\placeholders\ava-64.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\coconut.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\basic.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\danger.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\drip.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\hero.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\marketing.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\newsletter-2.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\newsletter-3.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\newsletter.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\order.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\password-reset.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\plain-text.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\receipt.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\sidebar-hero.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\sidebar.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\success.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\warning.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\welcome-2.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\email-templates\welcome.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\flags\24\Canada.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\flags\24\European-Union.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\flags\24\France.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\flags\24\Germany.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\flags\24\Russia.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\flags\24\Spain.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\flags\24\United-Arab-Emirates.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\flags\24\United-Kingdom.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\flags\24\United-States.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\loaders\svg-loaders\three-dots.svg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\loaders\svg-loaders\three-dots0.svg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\logos\logo-4-blue.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\menu-grid\calendar.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\menu-grid\dashboard.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\menu-grid\flask.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\menu-grid\profile.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\menu-grid\settings.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\menu-grid\ticket.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\order\item-1.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\order\item-2.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\order\item-3.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\order\item-4.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\payment\ma.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\payment\ms.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\payment\visa.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\placeholders\placeholder-256x256.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\placeholders\placeholder-360x230.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\placeholders\placeholder-512x512.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\placeholders\placeholder-lg.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\profile\cover.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\profile\p-1.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\profile\p-2.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\profile\ph-1.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\profile\ph-2.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\profile\ph-3.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\profile\ph-4.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\profile\ph-5.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\profile\ph-6.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\profile\profile_image_cover.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\angel.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\angry-2.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\angry-3.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\baby-1.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\confused-3.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\creepy.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\crying-3.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\dazed-2.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\dead-4.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\desperate-1.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\doctor.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\dumb.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\gentleman-3.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\gentleman-4.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\goofy-1.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\goofy-4.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\happy-1.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\happy-10.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\happy-11.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\happy-5.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\happy-6.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\happy-7.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\happy-8.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\happy-9.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\hipster-2.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\in-love-2.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\in-love-3.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\in-love-4.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\joyful-2.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\smiley\kiss-1.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\thumbs\ph-1.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\thumbs\ph-2.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\thumbs\ph-3.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\thumbs\ph-4.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\thumbs\ph-5.png" />
+    <Content Include="ibsui\dsh\modgui\assets\img\walrus.jpg" />
+    <Content Include="ibsui\dsh\modgui\assets\img\widgets\cover.png" />
+    <Content Include="ibsui\dsh\modgui\assets\jquery.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\core\app-menu.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\core\app.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\cards\card-charts.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\cards\card-ecommerce.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\cards\card-maps.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\cards\card-social.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\cards\card-statistics.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\cards\draggable.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\customizer.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\checkbox-radio.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\extended\form-inputmask.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\extended\form-maxlength.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\extended\form-typeahead.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\form-login-register.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\form-repeater.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\input-groups.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\select\form-select2.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\switch.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\switchery.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\tags\tagging.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\validation\form-validation.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\forms\wizard-steps.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\navs\navs.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\pages\chat-application.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\pages\content-sidebar.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\pages\dashboard-analytics.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\pages\dashboard-ecommerce.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\pages\dashboard-fitness.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\pages\email-application.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\pages\project-summary-bug.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\pages\project-summary-task.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\pages\timeline.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\components\table-components.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-autofill.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-button\datatable-button-basic.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-button\datatable-extensions-api.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-button\datatable-flash.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-button\datatable-html5.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-button\datatable-print.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-button\datatable-visibility.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-colvis.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-fixed-column.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-fixed-header.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-keytable.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-responsive.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-rowreorder.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatable-select.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatables-colreorder.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables-extensions\datatables-sources.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables\datatable-advanced.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables\datatable-api.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables\datatable-basic.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\datatables\datatable-styling.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\tables\jsgrid\jsgrid.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\ui\breadcrumbs-with-stats.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\ui\scrollable.js" />
+    <Content Include="ibsui\dsh\modgui\assets\js\scripts\ui\scrollable.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\scripts\common.min - Copy.js" />
+    <Content Include="ibsui\dsh\modgui\assets\scripts\common.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\scripts\kosmo.widget-controls.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\calendar.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\crm\contact.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\crm\contacts.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\crm\roles-permissions.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\crm\users-list.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\document-viewer.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\file-manager.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\mail.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\messenger.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\music-app.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\projects\grid-board.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\projects\kanban-board.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\projects\task.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\projects\tasks.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\apps\tickets.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\common.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\common2.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\dashboard\activity.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\dashboard\mail.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\dashboard\projects.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\dashboard\tabbed-sidebar.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\form\steps\column.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\form\steps\progress.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\bootstrap-daterange-picker\daterangepicker.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\bootstrap-markdown-editor\bootstrap-markdown-editor.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\bootstrap-notify\bootstrap-notify.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\bootstrap-table\bootstrap-table.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\bootstrap-table\img\asc.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\bootstrap-table\img\both.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\bootstrap-table\img\desc.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\bootstrap-tokenfield\bootstrap-tokenfield.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\datatables-net\datatables.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\dropzone\dropzone.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\flatpickr\flatpickr.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\flexdatalist\jquery.flexdatalist.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\fullcalendar\fullcalendar.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\flat-skin\danger.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\flat-skin\info.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\flat-skin\primary.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\flat-skin\success.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\flat-skin\warning.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\html5-skin\danger.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\html5-skin\info.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\html5-skin\primary.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\html5-skin\success.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\html5-skin\warning.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-flat-danger.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-flat-info.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-flat-primary.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-flat-success.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-flat-warning.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-html5-danger.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-html5-info.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-html5-primary.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-html5-success.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-html5-warning.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-modern-danger.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-modern-info.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-modern-primary.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-modern-success.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-modern-warning.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-nice-danger.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-nice-info.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-nice-primary.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-nice-success.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\img\sprite-skin-nice-warning.png" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\modern-skin\danger.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\modern-skin\info.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\modern-skin\primary.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\modern-skin\success.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\modern-skin\warning.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\nice-skin\danger.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\nice-skin\info.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\nice-skin\primary.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\nice-skin\success.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\ion-range-slider\nice-skin\warning.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\izi-modal\izi-modal.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\jquery-confirm\jquery.confirm.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\jquery-minicolors\jquery.minicolors.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\nestable\nestable.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\select2\select2.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\simplemde\simplemde.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\summernote\summernote.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\sweetalert\sweetalert.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\touchspin\touchspin.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\trumbowyg\trumbowyg.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\libs\uppy\uppy.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\misc\documentation.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\misc\faq.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\pages\auth.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\pages\contacts.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\payment\billing.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\payment\order.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\payment\orders-history.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\pricing\plans.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\pricing\subscriptions.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\profile\customer.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\profile\settings.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\profile\social.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\themes\primary.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\themes\sidebar-black.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\widgets\panels.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\widgets\payment.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\widgets\tables.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\styles\widgets\upload.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\calendars\fullcalendar.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\charts\chartist-plugin-tooltip.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\charts\chartist.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\charts\jquery-jvectormap-2.0.3.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\charts\morris.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\bgvideo\bigvideo.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\bgvideo\bigvideo.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\bgvideo\video-js.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\nouislider.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\pace.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\raty\fonts\raty.svg" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\raty\jquery.raty.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\sweetalert.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\toastr.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\unslider.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\file-uploaders\dropzone.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\custom.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\aero%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\aero.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\blue%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\blue.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\flat%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\flat.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\green%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\green.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\grey%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\grey.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\orange%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\orange.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\pink%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\pink.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\purple%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\purple.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\red%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\red.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\yellow%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\yellow.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\flat\_all.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\futurico\futurico%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\futurico\futurico.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\futurico\futurico.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\icheck.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\line\line%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\line\line.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\line\_all.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\aero%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\aero.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\blue%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\blue.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\green%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\green.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\grey%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\grey.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\minimal%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\minimal.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\orange%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\orange.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\pink%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\pink.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\purple%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\purple.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\red%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\red.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\yellow%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\yellow.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\minimal\_all.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\polaris\polaris%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\polaris\polaris.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\polaris\polaris.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\aero%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\aero.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\blue%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\blue.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\green%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\green.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\grey%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\grey.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\orange%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\orange.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\pink%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\pink.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\purple%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\purple.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\red%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\red.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\square%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\square.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\yellow%402x.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\yellow.png" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\icheck\square\_all.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\selects\select2.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\spinner\jquery.bootstrap-touchspin.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\tags\tagging.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\forms\toggle\switchery.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\pickers\daterange\daterangepicker.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\pickers\datetime\bootstrap-datetimepicker.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\pickers\pickadate\pickadate.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\datatable\buttons.bootstrap4.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\datatable\datatables.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\datatable\select.dataTables.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\extensions\autoFill.dataTables.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\extensions\buttons.dataTables.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\extensions\colReorder.dataTables.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\extensions\dataTables.colVis.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\extensions\fixedColumns.dataTables.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\extensions\fixedHeader.dataTables.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\extensions\keyTable.dataTables.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\extensions\responsive.dataTables.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\extensions\rowReorder.dataTables.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\jsgrid\jsgrid-theme.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\tables\jsgrid\jsgrid.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\ui\dragula.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\ui\prism.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\weather-icons\climacons.min.css" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\extended\inputmask\jquery.inputmask.bundle.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\extended\maxlength\bootstrap-maxlength.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\extended\typeahead\bloodhound.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\extended\typeahead\handlebars.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\extended\typeahead\typeahead.bundle.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\icheck\icheck.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\repeater\jquery.repeater.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\select\select2.full.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\spinner\jquery.bootstrap-touchspin.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\tags\form-field.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\tags\tagging.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\toggle\bootstrap-checkbox.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\toggle\switchery.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\validation\jqBootstrapValidation.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\forms\validation\jquery.validate.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\buttons.colVis.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\buttons.flash.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\buttons.html5.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\buttons.print.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\datatable\buttons.bootstrap4.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\datatable\dataTables.autoFill.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\datatable\dataTables.buttons.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\datatable\dataTables.colReorder.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\datatable\dataTables.colVis.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\datatable\dataTables.fixedColumns.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\datatable\dataTables.fixedHeader.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\datatable\dataTables.keyTable.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\datatable\datatables.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\datatable\dataTables.responsive.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\datatable\dataTables.rowReorder.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\datatable\dataTables.select.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\jsgrid\griddata.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\jsgrid\jsgrid.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\jszip.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\pdfmake.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\tables\vfs_fonts.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\timeline\horizontal-timeline.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\ui\jquery-ui.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\ui\jquery.sticky.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\ui\prism.min.js" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\js\vendors.min.js" />
+    <Content Include="ibsui\dsh\modgui\businessverification.aspx" />
+    <Content Include="ibsui\dsh\modgui\dmsconnect.aspx" />
+    <Content Include="ibsui\dsh\modgui\coopconnect.aspx" />
+    <Content Include="ibsui\dsh\modgui\header.ascx" />
+    <Content Include="ibsui\dsh\modgui\libs\bootstrap\css\bootstrap.min.css" />
+    <Content Include="ibsui\dsh\modgui\libs\bootstrap\js\bootstrap.min.js" />
+    <Content Include="ibsui\dsh\modgui\libs\c3js\c3.min.css" />
+    <Content Include="ibsui\dsh\modgui\libs\c3js\c3.min.js" />
+    <Content Include="ibsui\dsh\modgui\libs\d3\d3.min.js" />
+    <Content Include="ibsui\dsh\modgui\libs\jquery\jquery-ui.min.js" />
+    <Content Include="ibsui\dsh\modgui\libs\jquery\jquery.min.js" />
+    <Content Include="ibsui\dsh\modgui\libs\jscrollpane\jquery.jscrollpane.css" />
+    <Content Include="ibsui\dsh\modgui\libs\jscrollpane\jquery.jscrollpane.min.js" />
+    <Content Include="ibsui\dsh\modgui\libs\jscrollpane\jquery.mousewheel.js" />
+    <Content Include="ibsui\dsh\modgui\libs\loading-overlay\loadingoverlay.min.js" />
+    <Content Include="ibsui\dsh\modgui\libs\maplace\maplace.min.js" />
+    <Content Include="ibsui\dsh\modgui\libs\responsejs\response.min.js" />
+    <Content Include="ibsui\dsh\modgui\libs\tether\css\tether.min.css" />
+    <Content Include="ibsui\dsh\modgui\libs\tether\js\tether.min.js" />
+    <Content Include="ibsui\dsh\modgui\libs\velocity\velocity.min.js" />
+    <Content Include="ibsui\dsh\modgui\login.aspx" />
+    <Content Include="ibsui\dsh\modgui\shortcutmenu.ascx" />
+    <Content Include="ibsui\dsh\modgui\usermenu.ascx" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\JavaScript.js" />
+    <Content Include="app-assets\fonts\feather\fonts\feather2467.eot" />
+    <Content Include="app-assets\fonts\feather\fonts\feather2467.ttf" />
+    <Content Include="app-assets\fonts\feather\fonts\feather2467.woff" />
+    <Content Include="app-assets\fonts\kosmo\fonts\kosmo7381.ttf" />
+    <Content Include="app-assets\fonts\kosmo\fonts\kosmo7381.woff" />
+    <Content Include="app-assets\fonts\line-awesome\fonts\line-awesome0176.eot" />
+    <Content Include="app-assets\fonts\line-awesome\fonts\line-awesomeeb4f.eot" />
+    <Content Include="app-assets\fonts\line-awesome\fonts\line-awesomeeb4f.ttf" />
+    <Content Include="app-assets\fonts\line-awesome\fonts\line-awesomeeb4f.woff" />
+    <Content Include="app-assets\fonts\line-awesome\fonts\line-awesomeeb4f.woff2" />
+    <Content Include="app-assets\fonts\meteocons\fonts\meteoconsddea.eot" />
+    <Content Include="app-assets\fonts\meteocons\fonts\meteoconsddea.ttf" />
+    <Content Include="app-assets\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="app-assets\fonts\montserrat\Montserrat-Italic.woff" />
+    <Content Include="app-assets\fonts\montserrat\Montserrat-Italic.woff2" />
+    <Content Include="app-assets\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="app-assets\fonts\montserrat\Montserrat-Medium.woff" />
+    <Content Include="app-assets\fonts\montserrat\Montserrat-Medium.woff2" />
+    <Content Include="app-assets\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="app-assets\fonts\montserrat\Montserrat-Regular.woff" />
+    <Content Include="app-assets\fonts\montserrat\Montserrat-Regular.woff2" />
+    <Content Include="app-assets\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="app-assets\fonts\montserrat\Montserrat-SemiBold.woff" />
+    <Content Include="app-assets\fonts\montserrat\Montserrat-SemiBold.woff2" />
+    <Content Include="app-assets\fonts\open-sans\OpenSans-Bold.ttf" />
+    <Content Include="app-assets\fonts\open-sans\OpenSans-Italic.ttf" />
+    <Content Include="app-assets\fonts\open-sans\OpenSans-Regular.ttf" />
+    <Content Include="app-assets\fonts\open-sans\OpenSans-Semibold.ttf" />
+    <Content Include="app-assets\fonts\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="app-assets\fonts\simple-line-icons\fonts\Simple-Line-Iconsd41d.eot" />
+    <Content Include="app-assets\fonts\weather\font\weathericons-regular-webfont.eot" />
+    <Content Include="app-assets\fonts\weather\font\weathericons-regular-webfont.ttf" />
+    <Content Include="app-assets\fonts\weather\font\weathericons-regular-webfont.woff" />
+    <Content Include="app-assets\fonts\weather\font\weathericons-regular-webfont.woff2" />
+    <Content Include="app-assets\fonts\weather\font\weathericons-regular-webfontd41d.eot" />
+    <Content Include="app-assets\vendors\css\extensions\raty\fonts\raty.eot" />
+    <Content Include="app-assets\vendors\css\extensions\raty\fonts\raty.ttf" />
+    <Content Include="app-assets\vendors\css\extensions\raty\fonts\raty.woff" />
+    <Content Include="app-assets\vendors\css\extensions\raty\fonts\ratyd41d.eot" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\feather\fonts\feather2467.eot" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\feather\fonts\feather2467.ttf" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\feather\fonts\feather2467.woff" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\kosmo\fonts\kosmo7381.ttf" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\kosmo\fonts\kosmo7381.woff" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\line-awesome\fonts\line-awesome0176.eot" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\line-awesome\fonts\line-awesomeeb4f.eot" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\line-awesome\fonts\line-awesomeeb4f.ttf" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\line-awesome\fonts\line-awesomeeb4f.woff" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\line-awesome\fonts\line-awesomeeb4f.woff2" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\Montserrat-Italic.ttf" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\Montserrat-Italic.woff" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\Montserrat-Italic.woff2" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\Montserrat-Medium.ttf" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\Montserrat-Medium.woff" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\Montserrat-Medium.woff2" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\Montserrat-Regular.ttf" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\Montserrat-Regular.woff" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\Montserrat-Regular.woff2" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\Montserrat-SemiBold.ttf" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\Montserrat-SemiBold.woff" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\montserrat\Montserrat-SemiBold.woff2" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\open-sans\OpenSans-Bold.ttf" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\open-sans\OpenSans-Italic.ttf" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\open-sans\OpenSans-Regular.ttf" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\open-sans\OpenSans-Semibold.ttf" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="ibsui\dsh\modgui\assets\fonts\simple-line-icons\fonts\Simple-Line-Iconsd41d.eot" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\raty\fonts\raty.eot" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\raty\fonts\raty.ttf" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\raty\fonts\raty.woff" />
+    <Content Include="ibsui\dsh\modgui\assets\vendors\css\extensions\raty\fonts\ratyd41d.eot" />
+    <Content Include="ibsui\cssjs\notie.scss" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="scripts\respond.js" />
+    <Content Include="scripts\respond.min.js" />
+    <Content Include="scripts\WebForms\DetailsView.js" />
+    <Content Include="scripts\WebForms\Focus.js" />
+    <Content Include="scripts\WebForms\GridView.js" />
+    <Content Include="scripts\WebForms\Menu.js" />
+    <Content Include="scripts\WebForms\MenuStandards.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="scripts\WebForms\SmartNav.js" />
+    <Content Include="scripts\WebForms\TreeView.js" />
+    <Content Include="scripts\WebForms\WebForms.js" />
+    <Content Include="scripts\WebForms\WebParts.js" />
+    <Content Include="scripts\WebForms\WebUIValidation.js" />
+    <None Include="scripts\_references.js" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="packages.config" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app_code\GridViewGroup.cs" />
+    <Content Include="app_code\GridViewGroupList.cs" />
+    <Content Include="app_code\GridViewHelper.cs" />
+    <Content Include="app_code\GridViewSummary.cs" />
+    <Content Include="app_code\GridViewSummaryList.cs" />
+    <Compile Include="appcode\GridViewGroup.cs" />
+    <Compile Include="appcode\GridViewGroupList.cs" />
+    <Compile Include="appcode\GridViewHelper.cs" />
+    <Compile Include="appcode\GridViewSummary.cs" />
+    <Compile Include="appcode\GridViewSummaryList.cs" />
+    <Compile Include="app_start\BundleConfig.cs" />
+    <Compile Include="app_start\RouteConfig.cs" />
+    <Compile Include="data\DatabaseSessionData.cs" />
+    <Compile Include="data\DataHashSets.cs" />
+    <Compile Include="data\DataPurifier.cs" />
+    <Compile Include="data\EmailCredentials.cs" />
+    <Compile Include="data\EmailSender.cs" />
+    <Compile Include="data\FileIron.cs" />
+    <Compile Include="data\FileManager.cs" />
+    <Compile Include="data\GetAPIData.cs" />
+    <Compile Include="data\GlassWipe.cs" />
+    <Compile Include="data\GlobalParameters.cs" />
+    <Compile Include="data\Guarantor.cs" />
+    <Compile Include="data\ImageIron.cs" />
+    <Compile Include="data\ListToDataTable.cs" />
+    <Compile Include="data\PengerData.cs" />
+    <Compile Include="data\RightsAndAccess.cs" />
+    <Compile Include="data\Secure360.cs" />
+    <Compile Include="data\SessionDataStore.cs" />
+    <Compile Include="data\SessionInMemory.cs" />
+    <Compile Include="data\SessionToLiteDB.cs" />
+    <Compile Include="data\SqlCommandDumper.cs" />
+    <Compile Include="data\StringUtil.cs" />
+    <Compile Include="data\SuiteDreamLiner.cs" />
+    <Compile Include="data\WideGateway.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\createbanks.aspx.cs">
+      <DependentUpon>createbanks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\createbanks.aspx.designer.cs">
+      <DependentUpon>createbanks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\minstatement.aspx.cs">
+      <DependentUpon>minstatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\minstatement.aspx.designer.cs">
+      <DependentUpon>minstatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\pesalink2account.aspx.cs">
+      <DependentUpon>pesalink2account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\pesalink2account.aspx.designer.cs">
+      <DependentUpon>pesalink2account.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\pesalink2phone.aspx.cs">
+      <DependentUpon>pesalink2phone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\pesalink2phone.aspx.designer.cs">
+      <DependentUpon>pesalink2phone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\iftaccount.aspx.cs">
+      <DependentUpon>iftaccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\iftaccount.aspx.designer.cs">
+      <DependentUpon>iftaccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\fullstatement.aspx.cs">
+      <DependentUpon>fullstatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\fullstatement.aspx.designer.cs">
+      <DependentUpon>fullstatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\accounttransaction.aspx.cs">
+      <DependentUpon>accounttransaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\accounttransaction.aspx.designer.cs">
+      <DependentUpon>accounttransaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\accountbalance.aspx.cs">
+      <DependentUpon>accountbalance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\accountbalance.aspx.designer.cs">
+      <DependentUpon>accountbalance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\apiendpoints.aspx.cs">
+      <DependentUpon>apiendpoints.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\apiendpoints.aspx.designer.cs">
+      <DependentUpon>apiendpoints.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\createapplications.aspx.cs">
+      <DependentUpon>createapplications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\createapplications.aspx.designer.cs">
+      <DependentUpon>createapplications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\mpesaurl.aspx.cs">
+      <DependentUpon>mpesaurl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\mpesaurl.aspx.designer.cs">
+      <DependentUpon>mpesaurl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\overviewpage.aspx.cs">
+      <DependentUpon>overviewpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\overviewpage.aspx.designer.cs">
+      <DependentUpon>overviewpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\samplepage.aspx.cs">
+      <DependentUpon>samplepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\samplepage.aspx.designer.cs">
+      <DependentUpon>samplepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\cop\createaccount.aspx.cs">
+      <DependentUpon>createaccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\cop\createaccount.aspx.designer.cs">
+      <DependentUpon>createaccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\dms\filetype.aspx.cs">
+      <DependentUpon>filetype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\dms\filetype.aspx.designer.cs">
+      <DependentUpon>filetype.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\dms\filesubcategory.aspx.cs">
+      <DependentUpon>filesubcategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\dms\filesubcategory.aspx.designer.cs">
+      <DependentUpon>filesubcategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\dms\files.aspx.cs">
+      <DependentUpon>files.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\dms\files.aspx.designer.cs">
+      <DependentUpon>files.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\dms\folders.aspx.cs">
+      <DependentUpon>folders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\dms\folders.aspx.designer.cs">
+      <DependentUpon>folders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\businessverification.aspx.cs">
+      <DependentUpon>businessverification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\businessverification.aspx.designer.cs">
+      <DependentUpon>businessverification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\dmsconnect.aspx.cs">
+      <DependentUpon>dmsconnect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\dmsconnect.aspx.designer.cs">
+      <DependentUpon>dmsconnect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\coopconnect.aspx.cs">
+      <DependentUpon>coopconnect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\coopconnect.aspx.designer.cs">
+      <DependentUpon>coopconnect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\header.ascx.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\header.ascx.designer.cs">
+      <DependentUpon>header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\shortcutmenu.ascx.cs">
+      <DependentUpon>shortcutmenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\shortcutmenu.ascx.designer.cs">
+      <DependentUpon>shortcutmenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\usermenu.ascx.cs">
+      <DependentUpon>usermenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ibsui\dsh\modgui\usermenu.ascx.designer.cs">
+      <DependentUpon>usermenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>12529</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12529/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

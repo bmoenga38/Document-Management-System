@@ -1,0 +1,144 @@
+﻿.web_dialog_overlay {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    opacity: .3;
+    filter: alpha(opacity=30);
+    -moz-opacity: .3;
+    display: none;
+}
+
+.web_dialog {
+    z-index: 1000;
+    display: none;
+    position: fixed;
+    min-width: 150px;
+    width: 30%;
+    min-height: 150px;
+    height: auto;
+    top: 150px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ffffff;
+    color: black;
+    border: 2px solid #336699;
+    padding: 0px;
+    font-family: Verdana;
+    font-size: 10pt;
+    border-radius: 10px;
+}
+
+.web_dialog_title {
+    border-bottom: solid 2px #336699;
+    background-color: #336699;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 4px;
+    color: White;
+    font-weight: bold;
+}
+
+    .web_dialog_title a {
+        color: White;
+        text-decoration: none;
+    }
+
+.align_right {
+    text-align: right;
+}
+
+.modalBackground {
+    background-color: Black;
+    filter: alpha(opacity=20);
+    opacity: 0.2;
+    padding: 0px;
+}
+
+.modalBackgroundTransparent {
+    background-color: Black;
+    filter: alpha(opacity=90);
+    background-color: transparent;
+}
+
+.modalPopup {
+    background-color: #FFFFFF;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 300px;
+    height: 140px;
+}
+
+.noPadding {
+    padding: 2px 2px 2px 2px;
+}
+
+.modalPopup2 {
+    background-color: #FFFFFF;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #cecaca;
+    border-radius: 5px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 10%;
+    padding-right: 1px;
+}
+
+.PromptCSS {
+    color: DodgerBlue;
+    font-size: large;
+    font-style: italic;
+    font-weight: bold;
+    background-color: AliceBlue;
+    height: 25px;
+}
+
+.VeryPoorStrength {
+    /*background: Red;*/
+    color: Red;
+    font-weight: bold;
+}
+
+.WeakStrength {
+    /*background: Gray;*/
+    color: Gray;
+    font-weight: bold;
+}
+
+.AverageStrength {
+    /*background: orange;*/
+    color: orange;
+    font-weight: bold;
+}
+
+.GoodStrength {
+    /*background: blue;*/
+    color: blue;
+    font-weight: bold;
+}
+
+.ExcellentStrength {
+    /*background: Green;*/
+    color: Green;
+    font-weight: bold;
+}
+
+.BarBorder {
+    border-style: solid;
+    border-width: 1px;
+    width: 180px;
+    padding: 2px;
+}
